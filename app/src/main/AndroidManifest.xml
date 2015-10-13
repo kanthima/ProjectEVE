@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eve.myapplication" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/bg9"
+        android:label="Time Table"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FormRecordTimeActivity"
+            android:label="@string/title_activity_form_record_time"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FormCount"
+            android:label="@string/title_activity_form_count"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".History"
+            android:label="@string/title_activity_history"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ListDeleteActivity"
+            android:label="@string/title_activity_list_delete" >
+        </activity>
+        <activity
+            android:name=".EditSQLiteActivity"
+            android:label="@string/title_activity_edit_sqlite" >
+        </activity>
+    </application>
+
+</manifest>
