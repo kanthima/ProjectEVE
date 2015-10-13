@@ -1,5 +1,6 @@
 package com.example.eve.myapplication;
 
+import android.app.AlertDialog;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditSQLiteActivity extends AppCompatActivity {
 
@@ -25,10 +27,54 @@ public class EditSQLiteActivity extends AppCompatActivity {
         //Bind Widget
 
         bindWidget();
+
+        //Show View
+        showView();
     }// onCreate
+
+    private void showView() {
+
+        nameString = getIntent().getStringExtra("name");
+        nameEditText.setText(nameString);
+
+        dateString = getIntent().getStringExtra("date");
+        dateEditText.setText(dateString);
+
+        countString= getIntent().getStringExtra("count");
+        countEditText.setText(countString);
+
+        dataString = getIntent().getStringExtra("data");
+        dataEditText.setText(dataString);
+    }
 
     public void clickUpdateSQLite(View view){
         deleteOnData();
+
+        getNewValue();
+
+        updateSQLite();
+
+    }
+
+    private void updateSQLite() {
+
+        timeTABEL objTimeTABEL = new timeTABEL(this);
+        objTimeTABEL.addNewValueToSQLite(nameString, dateString, Integer.parseInt(countString), dataString);
+
+        //My Dialog
+
+        AlertDialog.Builder objBuilder = new AlertDialog.Builder(this);
+
+
+    }
+
+    private void getNewValue() {
+
+        nameString = nameEditText.getText().toString().trim();
+        dateString = dateEditText.getText().toString().trim();
+        countString = countEditText.getText().toString().trim();
+        dataString = dataEditText.getText().toString().trim();
+
     }
 
     private void deleteOnData() {
@@ -47,7 +93,7 @@ public class EditSQLiteActivity extends AppCompatActivity {
     private void bindWidget() {
 
         nameEditText = (EditText) findViewById(R.id.edtNameED);
-        dateEditText = (EditText) findViewById(R.id.edtDataED);
+        dateEditText = (EditText) findViewById(R.id.edtDateED);
         countEditText = (EditText) findViewById(R.id.edtCountED);
         dataEditText = (EditText) findViewById(R.id.edtDataED);
     }

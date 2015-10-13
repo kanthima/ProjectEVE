@@ -53,7 +53,7 @@ public class History extends ListActivity {
         AlertDialog.Builder objAlert = new AlertDialog.Builder(this);
         objAlert.setIcon(R.drawable.history);
         objAlert.setTitle("You Name = " + strName);
-        objAlert.setMessage("You Click" + strDate + "\n" + "You Count =" + Integer.toString(intCount) +
+        objAlert.setMessage("Date = " + strDate + "\n" + "You Count =" + Integer.toString(intCount) +
                 "\n" + "You Data =" + strData);
         objAlert.setCancelable(false);
         objAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
