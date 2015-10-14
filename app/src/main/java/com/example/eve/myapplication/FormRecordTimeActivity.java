@@ -91,6 +91,10 @@ public class FormRecordTimeActivity extends Activity {
               @Override
               public void onClick(DialogInterface dialog, int which) {
                   upDatatoSOLite();
+
+
+                  //Intent to CalendaActivity
+                  startActivity(new Intent(FormRecordTimeActivity.this,CalandaActivity.class));
               }
           });
         objAlert.show();

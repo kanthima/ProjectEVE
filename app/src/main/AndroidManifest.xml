@@ -42,6 +42,8 @@
             android:name=".EditSQLiteActivity"
             android:label="@string/title_activity_edit_sqlite" >
         </activity>
+        <activity android:name=".CalandaActivity" >
+        </activity>
     </application>
 
 </manifest>
