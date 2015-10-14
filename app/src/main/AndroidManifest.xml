@@ -44,6 +44,8 @@
         </activity>
         <activity android:name=".CalandaActivity" >
         </activity>
+        <activity android:name=".DetaildayActivity" >
+        </activity>
     </application>
 
 </manifest>

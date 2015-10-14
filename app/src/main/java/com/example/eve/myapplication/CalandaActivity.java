@@ -287,6 +287,10 @@ public class CalandaActivity extends Activity implements OnClickListener
             String date_month_year = (String) view.getTag();
             Toast.makeText(getApplicationContext(), date_month_year, Toast.LENGTH_SHORT).show();
 
-        }
+            //Intent to DetailDayActivity
+
+
+
+        }//เมื่อคลิกที่วันที่ จะทำงานที่นี่
     }
 }
