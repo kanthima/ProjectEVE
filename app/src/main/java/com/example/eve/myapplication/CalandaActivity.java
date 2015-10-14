@@ -289,7 +289,9 @@ public class CalandaActivity extends Activity implements OnClickListener
 
             //Intent to DetailDayActivity
 
-
+            Intent objIntent = new Intent(CalandaActivity.this, DetaildayActivity.class);
+            objIntent.putExtra("Date", date_month_year);
+            startActivity(objIntent);
 
         }//เมื่อคลิกที่วันที่ จะทำงานที่นี่
     }
