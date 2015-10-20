@@ -4,7 +4,7 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="@drawable/bg">
+	android:background="@drawable/wall19">
 
 	<ImageView
 		android:id="@+id/addJournalEntry"
@@ -18,8 +18,8 @@
 		android:id="@+id/selectedDayMonthYear"
 		android:textColor="#FFFFFF"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:background="@drawable/button_blue_background"
-		android:layout_width="wrap_content"
+		android:background="#5dfc444d"
+		android:layout_width="314dp"
 		android:layout_height="wrap_content">
 	</Button>
 
@@ -40,7 +40,7 @@
 			android:layout_weight="0.8"
 			android:textColor="#FFFFFF"
 		android:textAppearance="?android:attr/textAppearanceMedium"
-			android:background="@drawable/button_blue_background"
+			android:background="#4afaacaf"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content">
 		</Button>

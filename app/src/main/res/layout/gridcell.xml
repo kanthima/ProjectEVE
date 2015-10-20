@@ -9,7 +9,7 @@
 		android:id="@+id/gridcell"
 		android:layout_gravity="center"
 		android:textColor="#FFFFFF"
-		android:background="@drawable/calendar_button_selector"
+		android:background="#5dfbc6c8"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content">

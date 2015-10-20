@@ -46,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
 
     }// clicAdd
 
+    public void clickCalender(View view ) {
+
+        Intent objIntent = new Intent(MainActivity.this, CalandaActivity.class);
+        startActivity(objIntent);
+
+    }//click Calender
+
     private void testerUpdate() {
         objtimeTABLE.addNewValueToSQLite("test","30/09/58",3,"sub culture");
     }//tesrterUpdate

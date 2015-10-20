@@ -25,11 +25,6 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".FormCount"
-            android:label="@string/title_activity_form_count"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity
             android:name=".History"
             android:label="@string/title_activity_history"
             android:screenOrientation="portrait" >

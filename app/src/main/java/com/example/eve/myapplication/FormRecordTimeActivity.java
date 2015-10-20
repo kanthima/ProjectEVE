@@ -102,12 +102,6 @@ public class FormRecordTimeActivity extends Activity {
 
 
 
-    public  void  clickGo (View view){
-        Intent objIntent = new Intent(FormRecordTimeActivity.this,FormCount.class);
-        startActivity(objIntent);
-
-    }// clickGo
-
 
     private void upDatatoSOLite() {
         timeTABEL objtimeTABLE = new timeTABEL(this);
