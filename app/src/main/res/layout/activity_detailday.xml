@@ -8,6 +8,16 @@
     tools:context="com.example.eve.myapplication.DetaildayActivity"
     android:background="@drawable/bg6">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton3"
+        android:onClick="clickHome"
+        android:src="@drawable/build5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

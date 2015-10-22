@@ -295,4 +295,8 @@ public class CalandaActivity extends Activity implements OnClickListener
 
         }//เมื่อคลิกที่วันที่ จะทำงานที่นี่
     }
+    public void clickHome (View view) {
+        Intent objIntent = new Intent(CalandaActivity.this, MainActivity.class);
+        startActivity(objIntent);
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.eve.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +37,11 @@ public class DetaildayActivity extends AppCompatActivity {
 
     public void clickBack(View view) {
         finish();
+    }
+
+    public void clickHome(View view) {
+        Intent objIntent = new Intent(DetaildayActivity.this, MainActivity.class);
+        startActivity(objIntent);
     }
 
 }//MainClass

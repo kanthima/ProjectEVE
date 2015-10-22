@@ -116,8 +116,8 @@ public class FormRecordTimeActivity extends Activity {
     private void showLog() {
         Log.d("count", "Time = " + strShowDate);
         Log.d("count", "count = " + strCount);
-        Log.d("name","name ="+ strName);
-        Log.d("data","data =" + strData);
+        Log.d("name", "name =" + strName);
+        Log.d("data", "data =" + strData);
     }// show Log
 
     private void showAlert() {
@@ -130,7 +130,7 @@ public class FormRecordTimeActivity extends Activity {
         objAlert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
+                dialog.dismiss();
             }
         });
           objAlert.show();
@@ -175,5 +175,10 @@ public class FormRecordTimeActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }// MainClass
-}
+    }
+
+    public void clickHome(View view) {
+        Intent objIntent = new Intent(FormRecordTimeActivity.this, MainActivity.class);
+        startActivity(objIntent);
+    }
+}// MainClass
