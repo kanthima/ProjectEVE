@@ -35,7 +35,7 @@ public class FormRecordTimeActivity extends Activity {
     //Explicit
     private TextView txtShowDate;
     private EditText edtCount, edtName, edtData;
-    private String strShowDate, strCount, strName, strData;
+    private String strShowDate, strCount, strName, strData ;
 
 
 

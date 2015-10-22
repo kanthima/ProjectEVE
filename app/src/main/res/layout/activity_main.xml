@@ -82,4 +82,16 @@
         android:layout_above="@+id/editText2"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULTS"
+        android:onClick="clickResults"
+        android:id="@+id/button4"
+        android:layout_below="@+id/button2"
+        android:layout_toRightOf="@+id/linearLayout3"
+        android:textSize="@dimen/h2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

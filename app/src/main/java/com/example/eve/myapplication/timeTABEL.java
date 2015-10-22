@@ -20,7 +20,7 @@ public class timeTABEL {
     public static final String COLUMN_DATE = "date";
     public static final String COLUMN_COUNT = "count";
     public static final String COLUMN_DATA = "data";
-    public static final String COLUMN_RESULTS = "results";
+
 
 
 
@@ -39,7 +39,7 @@ public class timeTABEL {
     public  Cursor readAllData(){
 
         Cursor objCursor = readSQLite.query(TABLE_TIME, new String[]{COLUMN_ID, COLUMN_NAME,
-                COLUMN_DATE, COLUMN_COUNT, COLUMN_DATA,COLUMN_RESULTS}, null, null, null, null, null);
+                COLUMN_DATE, COLUMN_COUNT, COLUMN_DATA,}, null, null, null, null, null);
         if (objCursor != null){
             objCursor.moveToFirst();
         }
@@ -49,14 +49,14 @@ public class timeTABEL {
 
 
     //Add New Value to SQLite
-    public long addNewValueToSQLite(String strname,String strdate,Integer intcount,String strdata,String strresults){
+    public long addNewValueToSQLite(String strname,String strdate,Integer intcount,String strdata){
 
         ContentValues objContentValue = new ContentValues();
         objContentValue.put(COLUMN_NAME,strname);
         objContentValue.put(COLUMN_DATE,strdate);
         objContentValue.put(COLUMN_COUNT,intcount);
         objContentValue.put(COLUMN_DATA,strdata);
-        objContentValue.put(COLUMN_RESULTS,strresults);
+
 
         return writeSQLite.insert(TABLE_TIME, null, objContentValue);
     }//addNewValueSQLite

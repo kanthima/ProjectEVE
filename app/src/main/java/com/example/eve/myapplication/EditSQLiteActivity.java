@@ -17,7 +17,7 @@ public class EditSQLiteActivity extends AppCompatActivity {
 
     //Explicit
     private EditText nameEditText,dateEditText,countEditText,dataEditText;
-    private  String nameString,dateString,countString,dataString;
+    private  String nameString,dateString,countString,dataString,resultsString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
