@@ -1,6 +1,7 @@
 package com.example.eve.myapplication;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -54,6 +55,10 @@ public class EditSQLiteActivity extends AppCompatActivity {
 
         updateSQLite();
 
+        Intent objIntent = new Intent(EditSQLiteActivity.this,History.class);
+        startActivity(objIntent);
+
+
     }
 
     private void updateSQLite() {
@@ -96,5 +101,9 @@ public class EditSQLiteActivity extends AppCompatActivity {
         dateEditText = (EditText) findViewById(R.id.edtDateED);
         countEditText = (EditText) findViewById(R.id.edtCountED);
         dataEditText = (EditText) findViewById(R.id.edtDataED);
+    }
+
+    public void clickBackEdit(View view) {
+        finish();
     }
 }//Main class

@@ -27,20 +27,12 @@
             android:textSize="@dimen/h2"
             android:layout_gravity="center_horizontal" />
 
-        <Button
-            android:layout_width="137dp"
-            android:layout_height="61dp"
-            android:text="Go"
-            android:onClick="clickGo"
-            android:id="@+id/button4"
-            android:layout_gravity="center_horizontal"
-            android:textSize="25dp" />
     </LinearLayout>
 
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="ADD  DATA"
+        android:text="ADD DATA"
         android:id="@+id/textView"
         android:layout_gravity="center"
         android:textSize="@dimen/h1"

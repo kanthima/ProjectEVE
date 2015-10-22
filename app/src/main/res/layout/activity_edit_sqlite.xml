@@ -14,7 +14,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
         android:padding="15dp"
-        android:background="#82ffffff">
+        android:background="#82ffffff"
+        android:id="@+id/linearLayout4">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,8 +28,7 @@
         <EditText
             android:layout_width="@dimen/edittext"
             android:layout_height="wrap_content"
-            android:id="@+id/edtNameED"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/edtNameED" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -43,7 +43,7 @@
                 android:layout_gravity="center_horizontal" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="106dp"
                 android:layout_height="wrap_content"
                 android:text="Current Date"
                 android:id="@+id/button5" />
@@ -52,24 +52,36 @@
         <EditText
             android:layout_width="@dimen/edittext"
             android:layout_height="wrap_content"
-            android:id="@+id/edtCountED"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/edtCountED" />
 
         <EditText
             android:layout_width="@dimen/edittext"
             android:layout_height="wrap_content"
             android:id="@+id/edtDataED"
-            android:layout_gravity="center_horizontal"
             android:lines="3"
             android:gravity="top" />
     </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:onClick="clickBackEdit"
+        android:id="@+id/button9"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/linearLayout4"
+        android:layout_alignStart="@+id/linearLayout4" />
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickUpdateSQLite"
         android:text="Update SQLite"
         android:id="@+id/button6"
-        android:layout_alignParentBottom="true" />
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
