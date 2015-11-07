@@ -30,6 +30,7 @@ public class DetaildayActivity extends AppCompatActivity {
         dateTextView.setText(strDate);
     }
 
+
     private void bindWidter() {
         dateTextView = (TextView) findViewById(R.id.txtShowDateDetail);
         dateListView = (ListView) findViewById(R.id.listView);
