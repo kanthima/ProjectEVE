@@ -7,4 +7,6 @@
     <dimen name="h3">20dp</dimen>
     <dimen name="image">170dp</dimen>
     <dimen name="edittext">200dp</dimen>
+
+    <dimen name="icon">80dp</dimen>
 </resources>
