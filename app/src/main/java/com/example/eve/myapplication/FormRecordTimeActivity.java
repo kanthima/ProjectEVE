@@ -138,7 +138,10 @@ public class FormRecordTimeActivity extends Activity {
 
 
     private void getTimeFromDevice() {
-        DateFormat objDateFormat = new SimpleDateFormat("dd/MM/yy 'at' HH:mm:ss a zzz" );
+       // DateFormat objDateFormat = new SimpleDateFormat("dd/MM/yy 'at' HH:mm:ss a zzz" );
+
+
+        DateFormat objDateFormat = new SimpleDateFormat("d-MMMM-yyyy" );
 
         Date objDate = new Date(); 
 
