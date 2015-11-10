@@ -17,4 +17,6 @@
     <string name="title_activity_edit">EditActivity</string>
     <string name="title_activity_edit_sqlite">EditSQLiteActivity</string>
     <string name="edit">Edit You SQLite</string>
+
+    <string name="save_hr">จำนวนชั่วโมง</string>
 </resources>

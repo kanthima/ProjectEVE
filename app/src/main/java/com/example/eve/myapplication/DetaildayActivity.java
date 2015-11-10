@@ -71,7 +71,9 @@ public class DetaildayActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
 
 
-                    showMyDialog(strName[i],strCount[i]);
+                    //showMyDialog(strName[i],strCount[i]);
+
+                    intentToSaveHr(strName[i],strCount[i]);
                 }
             });
 
@@ -82,6 +84,14 @@ public class DetaildayActivity extends AppCompatActivity {
         }
 
     }//Create List Dailyplan
+
+    private void intentToSaveHr(String strName, String strCount) {
+
+        Intent objIntent = new Intent(DetaildayActivity.this, SaveHrActivity.class);
+        objIntent.putExtra("Name", strName);
+        objIntent.putExtra("Count", strCount);
+        startActivity(objIntent);
+    }
 
 
     private void showMyDialog(String strName, String strCount) {
