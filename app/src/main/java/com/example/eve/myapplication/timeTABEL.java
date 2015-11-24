@@ -33,6 +33,23 @@ public class timeTABEL {
 
     }//constructor
 
+    public String searchID(String strName) {
+
+        String strID = null;
+        Cursor objCursor = readSQLite.query("timeTABLE",
+                new String[]{COLUMN_ID,COLUMN_NAME},
+                COLUMN_NAME +"=?",
+                new String[]{String.valueOf(strName)},
+                null,null,null,null);
+        if (objCursor != null) {
+            if (objCursor.moveToFirst()) {
+
+                strID = objCursor.getString(0);
+            }
+        }
+        return strID;
+    }
+
     
 
 

@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
     }//click Calender
 
+    public void clickReport(View view) {
+        Intent objIntent = new Intent(MainActivity.this, ReportActivity.class);
+        startActivity(objIntent);
+    }//click report
 
 
     private void testerUpdate() {

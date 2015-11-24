@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -80,6 +81,10 @@ public class SaveHrActivity extends AppCompatActivity {
         SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("my_time.db",MODE_PRIVATE,null);
 
         objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count1='test' WHERE _id=1");
+
+        timeTABEL objTimeTABEL = new timeTABEL(this);
+        String strID = objTimeTABEL.searchID(nameString);
+        Log.d("eve", "ID ==>" + strID);
 
     }//update new hr
 
