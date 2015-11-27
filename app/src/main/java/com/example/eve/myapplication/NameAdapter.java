@@ -47,12 +47,12 @@ public class NameAdapter extends BaseAdapter {
         //Forname
 
         TextView nameTextView = (TextView) objView1.findViewById(R.id.txtListName);
-        nameTextView.setText("ชื่อเชื้อ " +nameStrings[i]);
+        nameTextView.setText("ชื่อจุลินทรีย์ " +nameStrings[i]);
 
         //For Count
 
         TextView countTextView = (TextView) objView1.findViewById(R.id.txtListCount);
-        countTextView.setText("จำนวนครั้งที่เลี้ยงเชื้อ "+countStrings[i]);
+        countTextView.setText("จำนวนครั้งที่เลี้ยง "+countStrings[i]);
 
 
         return objView1;

@@ -5,6 +5,38 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.eve.myapplication.ReportActivity">
+    tools:context="com.example.eve.myapplication.ReportActivity"
+    android:background="@drawable/bg6">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="104dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/book135"
+            android:layout_weight="0.14" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="285dp"
+            android:layout_height="124dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/txtReName"
+                android:textSize="@dimen/h2"
+                android:textColor="#c8c8c8" />
+        </LinearLayout>
+
+    </LinearLayout>
 </RelativeLayout>

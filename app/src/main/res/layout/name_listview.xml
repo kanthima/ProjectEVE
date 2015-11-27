@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6">
 
     <ImageView
         android:layout_width="@dimen/icon"
         android:layout_height="@dimen/icon"
         android:id="@+id/imvicon"
         android:layout_margin="15dp"
-        android:src="@drawable/bg9" />
+        android:src="@drawable/contract11" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="96dp"
         android:gravity="center_vertical">
 
         <TextView
@@ -22,13 +23,16 @@
             android:text="New Text"
             android:id="@+id/txtListName"
             android:textSize="@dimen/h2"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#c8c8c8" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/txtListCount"
-            android:textSize="@dimen/h2" />
+            android:textSize="20dp"
+            android:textColor="#c8c8c8" />
     </LinearLayout>
+
 </LinearLayout>

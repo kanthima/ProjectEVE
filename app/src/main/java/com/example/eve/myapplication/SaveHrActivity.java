@@ -41,7 +41,7 @@ public class SaveHrActivity extends AppCompatActivity {
     private void showView() {
 
         nameString = getIntent().getStringExtra("Name");
-        nameTextView.setText("ชื่อเชื้อ =" +nameString);
+        nameTextView.setText("ชื่อจุลินทรีย์ =" +nameString);
 
 
         countTextView.setText("ครั้งที่ = "+ Integer.toString(timesAnInt));
@@ -63,10 +63,13 @@ public class SaveHrActivity extends AppCompatActivity {
             timesAnInt += 1;
             showView();
 
+            //Get Data From Hr Edittext
+            hrString = hrEditText.getText().toString().trim();
+
 
             //Update NewHr to SQLite
 
-            updateNewHr();
+            updateNewHr(hrString);
         } else {
 
             Intent objIntent = new Intent(SaveHrActivity.this, ResultActivity.class);
@@ -76,11 +79,11 @@ public class SaveHrActivity extends AppCompatActivity {
 
     }
 
-    private void updateNewHr() {
+    private void updateNewHr(String strHr) {
 
         SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("my_time.db",MODE_PRIVATE,null);
 
-        objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count1='test' WHERE _id=1");
+        objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count1='"+strHr+"' WHERE _id=1");
 
         timeTABEL objTimeTABEL = new timeTABEL(this);
         String strID = objTimeTABEL.searchID(nameString);
