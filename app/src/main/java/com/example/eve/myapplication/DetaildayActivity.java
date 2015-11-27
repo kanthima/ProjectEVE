@@ -73,7 +73,7 @@ public class DetaildayActivity extends AppCompatActivity {
 
                     //showMyDialog(strName[i],strCount[i]);
 
-                    intentToSaveHr(strName[i],strCount[i]);
+                    intentToSaveHr(strName[i],strCount[i],i+1);
                 }
             });
 
@@ -85,11 +85,12 @@ public class DetaildayActivity extends AppCompatActivity {
 
     }//Create List Dailyplan
 
-    private void intentToSaveHr(String strName, String strCount) {
+    private void intentToSaveHr(String strName, String strCount,int intID) {
 
         Intent objIntent = new Intent(DetaildayActivity.this, SaveHrActivity.class);
         objIntent.putExtra("Name", strName);
         objIntent.putExtra("Count", strCount);
+        objIntent.putExtra("ID", intID);
         startActivity(objIntent);
     }
 

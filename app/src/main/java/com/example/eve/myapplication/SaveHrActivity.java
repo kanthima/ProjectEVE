@@ -16,7 +16,7 @@ public class SaveHrActivity extends AppCompatActivity {
     private TextView nameTextView, countTextView;
     private EditText hrEditText;
     private String nameString,countString,hrString;
-    private int timesAnInt = 1,intCount;
+    private int timesAnInt = 1,intCount, intID;
 
 
     @Override
@@ -59,31 +59,39 @@ public class SaveHrActivity extends AppCompatActivity {
 
     public void clickSaveButton(View view) {
 
-        if (timesAnInt <intCount) {
-            timesAnInt += 1;
-            showView();
+        if (timesAnInt <=intCount) {
+
+
 
             //Get Data From Hr Edittext
             hrString = hrEditText.getText().toString().trim();
 
-
             //Update NewHr to SQLite
 
-            updateNewHr(hrString);
+            intID = getIntent().getIntExtra("ID", 1);
+
+            updateNewHr(hrString,timesAnInt,intID);
+            timesAnInt += 1;
+            showView();
         } else {
 
             Intent objIntent = new Intent(SaveHrActivity.this, ResultActivity.class);
+
+
+            objIntent.putExtra("Count", intCount);
+            objIntent.putExtra("ID", intID);
             startActivity(objIntent);
 
         }
 
-    }
+    }//clicksavebutton
 
-    private void updateNewHr(String strHr) {
+    private void updateNewHr(String strHr,int intColum ,int intID) {
 
         SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("my_time.db",MODE_PRIVATE,null);
 
-        objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count1='"+strHr+"' WHERE _id=1");
+        //objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count"+ Integer.toString(intColum) +"='"+strHr+"' WHERE _id=1");
+        objSqLiteDatabase.execSQL("UPDATE timeTABLE SET Count"+ Integer.toString(intColum) +"='"+strHr+"' WHERE _id="+ Integer.toString(intID) +"");
 
         timeTABEL objTimeTABEL = new timeTABEL(this);
         String strID = objTimeTABEL.searchID(nameString);

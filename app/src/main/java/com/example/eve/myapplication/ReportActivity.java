@@ -11,10 +11,10 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 
-public class ReportActivity extends AppCompatActivity {
+//public class ReportActivity extends AppCompatActivity {
     //Explicit
   //  private Context objContext;
-    private String[] nameStrings;
+    //private String[] nameStrings;
   //  public ReportActivity(Context objContext, String[] nameStrings) {
       //  this.objContext = objContext;
        // this.nameStrings = nameStrings;
@@ -24,14 +24,14 @@ public class ReportActivity extends AppCompatActivity {
      //   return nameStrings.length;
    // }
 
-   // public Object getItem(int i) {
-   //     return null;
-   // }
+  //public Object getItem(int i) {
+       //return null;
+    //}
 
 
-   // public long getItemId(int i) {
-   //     return 0;
-   // }
+  //  public long getItemId(int i) {
+    //   return 0;
+  //  }
 
 
 //public View getView(int i,View view,ViewGroup viewGroup) {
@@ -39,14 +39,14 @@ public class ReportActivity extends AppCompatActivity {
 
 
 
-       //View objview = objLayoutInflater.inflate(R.layout.activity_report,viewGroup , false);
-   // TextView textView = (TextView) objview.findViewById(R.id.txtReName);
-   // textView.setText(nameStrings[i]);
+   // View objview = objLayoutInflater.inflate(R.layout.activity_report,viewGroup , false);
+    //TextView textView = (TextView) objview.findViewById(R.id.txtReName);
+   //textView.setText(nameStrings[i]);
 
-   // return objview;
-}
+  //  return objview;
+//}
 
 
-//}// main class
+// main class
 
 
