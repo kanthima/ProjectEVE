@@ -15,8 +15,7 @@
         android:background="#82ffffff"
         android:id="@+id/linearLayout4"
         android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_centerHorizontal="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,19 +26,9 @@
             android:layout_gravity="center_horizontal" />
 
         <EditText
-            android:layout_width="@dimen/edittext"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:id="@+id/edtNameED" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Date"
-            android:id="@+id/button5"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/button6"
-            android:layout_alignEnd="@+id/button6"
-            android:layout_gravity="right" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -48,27 +37,19 @@
             android:layout_gravity="center_horizontal">
 
             <EditText
-                android:layout_width="@dimen/edittext"
+                android:layout_width="232dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/edtDateED"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView4" />
+                android:id="@+id/edtDateED" />
 
         </LinearLayout>
 
         <EditText
-            android:layout_width="@dimen/edittext"
+            android:layout_width="228dp"
             android:layout_height="wrap_content"
             android:id="@+id/edtCountED" />
 
         <EditText
-            android:layout_width="@dimen/edittext"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:id="@+id/edtDataED"
             android:lines="3"
@@ -82,9 +63,9 @@
         android:onClick="clickBackEdit"
         android:id="@+id/button9"
         android:textSize="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/linearLayout4"
-        android:layout_alignStart="@+id/linearLayout4" />
+        android:layout_alignTop="@+id/button6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"

@@ -16,7 +16,8 @@ import android.widget.SimpleCursorAdapter;
 public class History extends ListActivity {
 
     private  timeTABEL objtimeTABLE;
-    private SimpleCursorAdapter objSimpleCursorAdapter;
+    private  SimpleCursorAdapter  objSimpleCursorAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class History extends ListActivity {
 
           objtimeTABLE = new timeTABEL(this);
 
-          //Create Listview
+        //Create Listview
           createListView();
 
     } // OnCreate

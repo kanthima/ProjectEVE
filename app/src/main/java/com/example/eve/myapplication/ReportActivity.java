@@ -1,52 +1,51 @@
 package com.example.eve.myapplication;
 
+import android.app.ListActivity;
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 
-//public class ReportActivity extends AppCompatActivity {
+public class ReportActivity extends ListActivity{
+
     //Explicit
-  //  private Context objContext;
-    //private String[] nameStrings;
-  //  public ReportActivity(Context objContext, String[] nameStrings) {
-      //  this.objContext = objContext;
-       // this.nameStrings = nameStrings;
-   // }
+    private timeTABEL objtimeTABLE;
+    private String[] strlistName;
+    private int[] myTarget;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_report);
 
-   // public int getCount() {
-     //   return nameStrings.length;
-   // }
+        objtimeTABLE = new timeTABEL(this);
 
-  //public Object getItem(int i) {
-       //return null;
-    //}
+        createListView();
+        setupAllArray();
+    }//on create
 
+    private void setupAllArray() {
+        strlistName = objtimeTABLE.listName();
+    }
 
-  //  public long getItemId(int i) {
-    //   return 0;
-  //  }
+    private void createListView() {
 
+        MyAdapter objMyAdapter = new MyAdapter(ReportActivity.this,strlistName,myTarget);
+        ListView objListView = (ListView) findViewById(R.id.listViewName);
+        objListView.setAdapter(objMyAdapter);
 
-//public View getView(int i,View view,ViewGroup viewGroup) {
-   // LayoutInflater objLayoutInflater = (LayoutInflater) objContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-
-
-   // View objview = objLayoutInflater.inflate(R.layout.activity_report,viewGroup , false);
-    //TextView textView = (TextView) objview.findViewById(R.id.txtReName);
-   //textView.setText(nameStrings[i]);
-
-  //  return objview;
-//}
+    }
 
 
-// main class
+}// main class
 
 

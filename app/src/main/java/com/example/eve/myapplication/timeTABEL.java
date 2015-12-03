@@ -21,8 +21,7 @@ public class timeTABEL {
     public static final String COLUMN_COUNT = "count";
     public static final String COLUMN_DATA = "data";
 
-
-
+    private String[] strlistName;
 
 
     public timeTABEL(Context context) {
@@ -32,6 +31,21 @@ public class timeTABEL {
 
 
     }//constructor
+
+
+    public String[] listName() {
+
+         strlistName = null;
+        Cursor objCursor = readSQLite.query(TABLE_TIME, new String [] {COLUMN_ID,COLUMN_NAME},null,null,null,null,null);
+        objCursor.moveToFirst();
+        strlistName = new String[objCursor.getCount()];
+        for (int i = 0; i < objCursor.getCount(); i++) {
+            strlistName[i] = objCursor.getString(objCursor.getColumnIndex(COLUMN_NAME));
+            objCursor.moveToNext();
+        }
+        objCursor.close();
+        return strlistName;
+    }// List Name
 
     public String searchID(String strName) {
 

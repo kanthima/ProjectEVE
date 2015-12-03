@@ -8,35 +8,21 @@
     tools:context="com.example.eve.myapplication.ReportActivity"
     android:background="@drawable/bg6">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtADDName"
+        android:textSize="@dimen/h2"
+        android:textColor="#c8c8c8"
+        android:layout_centerHorizontal="true"
+        android:text="New Text" />
+
+    <ListView
+        android:layout_width="342dp"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:weightSum="1">
+        android:id="@+id/listViewName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtADDName" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="104dp"
-            android:id="@+id/imageView"
-            android:src="@drawable/book135"
-            android:layout_weight="0.14" />
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="285dp"
-            android:layout_height="124dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/txtReName"
-                android:textSize="@dimen/h2"
-                android:textColor="#c8c8c8" />
-        </LinearLayout>
-
-    </LinearLayout>
 </RelativeLayout>

@@ -43,10 +43,6 @@ public class DetaildayActivity extends AppCompatActivity {
 
     private void createListDailyPlan() {
 
-
-
-
-
         try {
             SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("my_time.db",MODE_PRIVATE,null);
             Cursor objcursor = objSqLiteDatabase.rawQuery("SELECT * FROM timeTABLE WHERE date = " + "'" + strDate + "'",null);
